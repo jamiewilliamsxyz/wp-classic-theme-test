@@ -22,7 +22,14 @@
       </button>
 
       <div id="navigation" class="collapse navbar-collapse flex-column">
-        <img class="mb-3 mx-auto logo" src="./assets/images/logo.png" alt="logo">
+
+        <?php
+        if (function_exists("the_custom_logo")) {
+          $custom_logo_id = get_theme_mod("custom_logo");
+          $logo = wp_get_attachment_image_src($custom_logo_id);
+        }
+        ?>
+        <img class="mb-3 mx-auto logo" src="<?php echo $logo[0] ?>" alt="logo" />
 
         <?php
         wp_nav_menu(
@@ -36,7 +43,7 @@
         ?>
 
         <hr>
-        <ul class="social-list list-inline py-3 mx-auto">
+        <ul class=" social-list list-inline py-3 mx-auto">
           <li class="list-inline-item"><a href="#"><i class="fab fa-twitter fa-fw"></i></a></li>
           <li class="list-inline-item"><a href="#"><i class="fab fa-linkedin-in fa-fw"></i></a></li>
           <li class="list-inline-item"><a href="#"><i class="fab fa-github-alt fa-fw"></i></a></li>
