@@ -25,3 +25,6 @@ function jct_register_scripts()
   wp_enqueue_script("jct-bootstrap-js", "https://cdn.jsdelivr.net/npm/bootstrap@3.4.1/dist/js/bootstrap.min.js", [], "3.4.1", true);
   wp_enqueue_style("jct-js", get_template_directory_uri() . "/assets/js/main.js", [], $version, true);
 }
+
+// Theme Support
+add_theme_support("title_tag");
