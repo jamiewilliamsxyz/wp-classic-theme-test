@@ -33,3 +33,16 @@ function jct_theme_support()
 {
   add_theme_support("title-tag");
 }
+
+// Menus
+add_action("init", "jct_menus");
+
+function jct_menus()
+{
+  $locations = array(
+    "primary" => "Desktop Primary Left Sidebar",
+    "footer" => "Footer Menu Items"
+  );
+
+  register_nav_menus($locations);
+}
