@@ -13,7 +13,9 @@
 
 <body>
   <header class="header text-center">
-    <a class="site-title pt-lg-4 mb-0" href="/">Jamie's classic theme test</a>
+    <a class="site-title pt-lg-4 mb-0" href="/">
+      <?php echo get_bloginfo("name") ?>
+    </a>
 
     <nav class="navbar navbar-expand-lg navbar-dark">
 
