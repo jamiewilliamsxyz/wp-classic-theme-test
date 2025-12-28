@@ -27,4 +27,9 @@ function jct_register_scripts()
 }
 
 // Theme Support
-add_theme_support("title_tag");
+add_action("after_setup_theme", "jct_theme_support");
+
+function jct_theme_support()
+{
+  add_theme_support("title-tag");
+}
