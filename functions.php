@@ -48,3 +48,23 @@ function jct_menus()
 
   register_nav_menus($locations);
 }
+
+// Widgets
+add_action("widgets_init", "jct_widget_areas");
+
+function jct_widget_areas()
+{
+  register_sidebar(
+    array(
+      "before_title" => "",
+      "after_title" => "",
+      "before_widget" => '<ul class=" social-list list-inline py-3 mx-auto">',
+      "after_widget" => '</ul>'
+    ),
+    array(
+      "name" => "Sidebar Area",
+      "id" => "sidebar-1",
+      "description" => "Sidebar Widget Area"
+    )
+  );
+}
